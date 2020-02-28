@@ -144,7 +144,8 @@ public class RobotContainer {
    *
    * @return the command to run in autonomous
    */
-  public Command getAutonomousCommand() {
+  public Command getAutonomousCommand() 
+  {
     TrajectorySubsystem.resetEncoders();
 
     var autoVoltageConstraint = new DifferentialDriveVoltageConstraint(new SimpleMotorFeedforward(DriveConstants.ksVolts, DriveConstants.kvVoltSecondsPerMeter, DriveConstants.kaVoltSecondsSquaredPerMeter), DriveConstants.kDriveKinematics, 10);
@@ -156,11 +157,11 @@ public class RobotContainer {
     // An example trajectory to follow.  All units in meters.
     Trajectory exampleTrajectory = TrajectoryGenerator.generateTrajectory(
         // Start at the origin facing the +X direction
-        new Pose2d(0, 0, new Rotation2d(Math.PI)),
+        new Pose2d(+3.256419840021738, -0.5247718372522767, new Rotation2d(0)),
         // Pass through these two interior waypoints, making an 's' curve path
         List.of(new Translation2d(1, 0), new Translation2d(2, 0)),
         //ends at 3 meters after start point
-        new Pose2d(3, 0, new Rotation2d(Math.PI)),
+        new Pose2d(+0.267406467670438, -2.4515738458754286, new Rotation2d(-0.06913859222900287)),
         // Pass config
         config
     );

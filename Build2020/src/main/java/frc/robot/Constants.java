@@ -22,10 +22,10 @@ import edu.wpi.first.wpilibj.kinematics.DifferentialDriveKinematics;
 public final class Constants {
 
     // CAN IDs
-    public final static int FR_port = 4;
-    public final static int FL_port = 1;
-    public final static int BR_port = 3;
-    public final static int BL_port = 2;
+    public final static int FR_port = 3;
+    public final static int FL_port = 2;
+    public final static int BR_port = 4;
+    public final static int BL_port = 1;
 
     public final static int CP_port = 8;
     public final static int SF_port = 1;
